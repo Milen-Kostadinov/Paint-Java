@@ -3,10 +3,12 @@ package Model;
 import java.awt.*;
 
 public abstract class Shape {
+
     protected int width;
     protected int height;
-    //location point is always top left
     protected Point location;
+    protected Color color;
+
     public abstract boolean Contains(Point point);
     public abstract void DrawSelf(Graphics graphics);
 
@@ -32,5 +34,13 @@ public abstract class Shape {
 
     public void setLocation(Point location) {
         this.location = location;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }
